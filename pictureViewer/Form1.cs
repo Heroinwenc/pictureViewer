@@ -163,31 +163,18 @@ namespace pictureViewer
             }
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            pictureBox1.Width = trackBar1.Value * 50;
-            pictureBox1.Height = trackBar1.Value * 50;
-        }
-
-        private void btnbyt_Click(object sender, EventArgs e)
-        {
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.Width = pictureBox1.Image.Width + 50;
-            pictureBox1.Height = pictureBox1.Image.Height + 50;
-        }
-
-        private void btnkclt_Click(object sender, EventArgs e)
-        {
-            pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
-            pictureBox1.Width = pictureBox1.Image.Width;
-            pictureBox1.Height = pictureBox1.Image.Height;
-        }
-
         private void ayarbutton_Click(object sender, EventArgs e)
         {
-            // Açılan formda kullanıcının ayarlarını değiştirebileceği kodlar yazılabilir.
+            // Ayarlar Menüsü.
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            // Kullanıcı Menüsü.
+            User_menu usermenu = new User_menu();
+            usermenu.ShowDialog();
         }
     }
 }

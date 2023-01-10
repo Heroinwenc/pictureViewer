@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pictureViewer
 {
-    public partial class SettingsForm : Form
+    public partial class adminpanel : Form
     {
-        public SettingsForm()
+        public adminpanel()
         {
             InitializeComponent();
         }
@@ -86,10 +86,10 @@ namespace pictureViewer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
 
             //Dil Seçenekleri Başlangıç
-            if(dil==0)
+            if (dil == 0)
             {
 
                 suruklelbl1.Text = "Resim Görüntüleyici Ayarları";
@@ -97,7 +97,7 @@ namespace pictureViewer
                 label2.Text = "              Dil";
                 MessageBox.Show("Değişiklikler Kaydedildi, Lütfen Slaytı Yeniden Başlatın!");
             }
-            else if(dil==1)
+            else if (dil == 1)
             {
                 suruklelbl1.Text = "PictureViewer Settings";
                 label1.Text = "Interval";
@@ -113,7 +113,7 @@ namespace pictureViewer
             {
                 MessageBox.Show("Dil Türkçe Olarak Ayarlandı!");
             }
-            else if(dil == 1)
+            else if (dil == 1)
             {
                 MessageBox.Show("Language Set to English!");
             }
@@ -139,4 +139,4 @@ namespace pictureViewer
             pictureBox1.Height = trackBar1.Value * 10;
         }
     }
-}
+}                   

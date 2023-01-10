@@ -1,6 +1,6 @@
 ﻿namespace pictureViewer
 {
-    partial class SettingsForm
+    partial class adminpanel
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.suruklelbl1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnkclt = new System.Windows.Forms.Button();
+            this.btnbyt = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,16 +43,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnkclt = new System.Windows.Forms.Button();
-            this.btnbyt = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -85,9 +85,9 @@
             this.suruklelbl1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.suruklelbl1.Location = new System.Drawing.Point(58, 16);
             this.suruklelbl1.Name = "suruklelbl1";
-            this.suruklelbl1.Size = new System.Drawing.Size(158, 17);
+            this.suruklelbl1.Size = new System.Drawing.Size(93, 17);
             this.suruklelbl1.TabIndex = 2;
-            this.suruklelbl1.Text = "PictureViewer Settings";
+            this.suruklelbl1.Text = "Admin Panel";
             this.suruklelbl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.suruklelbl1_MouseDown);
             this.suruklelbl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.suruklelbl1_MouseMove);
             this.suruklelbl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.suruklelbl1_MouseUp);
@@ -112,6 +112,47 @@
             this.groupBox1.Size = new System.Drawing.Size(287, 358);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnkclt);
+            this.groupBox2.Controls.Add(this.btnbyt);
+            this.groupBox2.Controls.Add(this.trackBar1);
+            this.groupBox2.Location = new System.Drawing.Point(13, 130);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(261, 145);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Zoom Settings";
+            // 
+            // btnkclt
+            // 
+            this.btnkclt.Location = new System.Drawing.Point(147, 88);
+            this.btnkclt.Name = "btnkclt";
+            this.btnkclt.Size = new System.Drawing.Size(75, 23);
+            this.btnkclt.TabIndex = 4;
+            this.btnkclt.Text = "Small";
+            this.btnkclt.UseVisualStyleBackColor = true;
+            this.btnkclt.Click += new System.EventHandler(this.btnkclt_Click);
+            // 
+            // btnbyt
+            // 
+            this.btnbyt.Location = new System.Drawing.Point(35, 88);
+            this.btnbyt.Name = "btnbyt";
+            this.btnbyt.Size = new System.Drawing.Size(75, 23);
+            this.btnbyt.TabIndex = 3;
+            this.btnbyt.Text = "Big";
+            this.btnbyt.UseVisualStyleBackColor = true;
+            this.btnbyt.Click += new System.EventHandler(this.btnbyt_Click);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(48, 37);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(162, 45);
+            this.trackBar1.TabIndex = 2;
+            this.trackBar1.TickFrequency = 90;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // comboBox1
             // 
@@ -175,8 +216,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::pictureViewer.Properties.Resources.ayarbutonu;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox1.Image = global::pictureViewer.Properties.Resources.kullanicibutonu;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,48 +227,7 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnkclt);
-            this.groupBox2.Controls.Add(this.btnbyt);
-            this.groupBox2.Controls.Add(this.trackBar1);
-            this.groupBox2.Location = new System.Drawing.Point(13, 130);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(261, 145);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Zoom Settings";
-            // 
-            // btnkclt
-            // 
-            this.btnkclt.Location = new System.Drawing.Point(147, 88);
-            this.btnkclt.Name = "btnkclt";
-            this.btnkclt.Size = new System.Drawing.Size(75, 23);
-            this.btnkclt.TabIndex = 4;
-            this.btnkclt.Text = "Small";
-            this.btnkclt.UseVisualStyleBackColor = true;
-            this.btnkclt.Click += new System.EventHandler(this.btnkclt_Click);
-            // 
-            // btnbyt
-            // 
-            this.btnbyt.Location = new System.Drawing.Point(35, 88);
-            this.btnbyt.Name = "btnbyt";
-            this.btnbyt.Size = new System.Drawing.Size(75, 23);
-            this.btnbyt.TabIndex = 3;
-            this.btnbyt.Text = "Big";
-            this.btnbyt.UseVisualStyleBackColor = true;
-            this.btnbyt.Click += new System.EventHandler(this.btnbyt_Click);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(48, 37);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(162, 45);
-            this.trackBar1.TabIndex = 2;
-            this.trackBar1.TickFrequency = 90;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
-            // SettingsForm
+            // adminpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -235,18 +235,18 @@
             this.ClientSize = new System.Drawing.Size(284, 354);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SettingsForm";
+            this.Name = "adminpanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "settings";
             this.Text = "PictureViewer Settings";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

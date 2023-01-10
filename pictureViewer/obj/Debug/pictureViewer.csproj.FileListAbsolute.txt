@@ -1,0 +1,19 @@
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\bin\Debug\pictureViewer.exe.config
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\bin\Debug\pictureViewer.exe
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\bin\Debug\pictureViewer.pdb
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.csproj.AssemblyReference.cache
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.Form1.resources
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.Properties.Resources.resources
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.csproj.GenerateResource.cache
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.csproj.CoreCompileInputs.cache
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.exe
+C:\Users\LAB3\Desktop\kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.pdb
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\bin\Debug\pictureViewer.exe.config
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.exe
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.pdb
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\bin\Debug\pictureViewer.exe
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\bin\Debug\pictureViewer.pdb
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.csprojResolveAssemblyReference.cache
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.Form1.resources
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.Properties.Resources.resources
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.csproj.GenerateResource.Cache

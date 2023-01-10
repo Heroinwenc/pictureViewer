@@ -17,3 +17,4 @@ D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.cspro
 D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.Form1.resources
 D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.Properties.Resources.resources
 D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.csproj.GenerateResource.Cache
+D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.SettingsForm.resources

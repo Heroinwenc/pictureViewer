@@ -91,7 +91,7 @@ namespace pictureViewer
             if (chkOrderly.Checked == false)
             {
                 chkOrderly.Text = "Random";
-            
+
             }
             else
             {
@@ -119,6 +119,75 @@ namespace pictureViewer
             {
                 timer1.Enabled = true;
             }
+        }
+
+        private Point mouseDownPoint = Point.Empty;
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownPoint = e.Location;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePos = pictureBox1.PointToClient(Control.MousePosition);
+                int deltaY = mousePos.Y - mouseDownPoint.Y;
+                int nWidth = pictureBox1.Width + deltaY;
+                int nHeight = pictureBox1.Height + deltaY;
+                if (nWidth > 0 && nHeight > 0)
+                {
+                    pictureBox1.Width = nWidth;
+                    pictureBox1.Height = nHeight;
+                }
+            }
+        }
+
+        private void Form1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                if (e.Delta > 0)
+                {
+                    pictureBox1.Width += 10;
+                    pictureBox1.Height += 10;
+                }
+                else
+                {
+                    if (pictureBox1.Width > 50 && pictureBox1.Height > 50)
+                    {
+                        pictureBox1.Width -= 10;
+                        pictureBox1.Height -= 10;
+                    }
+                }
+            }
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            pictureBox1.Width = trackBar1.Value * 50;
+            pictureBox1.Height = trackBar1.Value * 50;
+        }
+
+        private void btnbyt_Click(object sender, EventArgs e)
+        {
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.Width = pictureBox1.Image.Width + 50;
+            pictureBox1.Height = pictureBox1.Image.Height + 50;
+        }
+
+        private void btnkclt_Click(object sender, EventArgs e)
+        {
+            pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
+            pictureBox1.Width = pictureBox1.Image.Width;
+            pictureBox1.Height = pictureBox1.Image.Height;
+        }
+
+        private void ayarbutton_Click(object sender, EventArgs e)
+        {
+            // Açılan formda kullanıcının ayarlarını değiştirebileceği kodlar yazılabilir.
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.ShowDialog();
         }
     }
 }

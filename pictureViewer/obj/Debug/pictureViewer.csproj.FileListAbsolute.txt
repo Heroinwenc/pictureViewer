@@ -19,4 +19,7 @@ D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.Prope
 D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.csproj.GenerateResource.Cache
 D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.SettingsForm.resources
 D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.User_menu.resources
+D:\Ömer YİĞİT\Kurs\pictureViewer-main\pictureViewer\bin\Debug\pictureViewer.exe.config
+D:\Ömer YİĞİT\Kurs\pictureViewer-main\pictureViewer\obj\Debug\pictureViewer.exe
+D:\Ömer YİĞİT\Kurs\pictureViewer-main\pictureViewer\obj\Debug\pictureViewer.pdb
 D:\Ömer YİĞİT\Kurs\pictureViewer\pictureViewer\obj\Debug\pictureViewer.adminpanel.resources

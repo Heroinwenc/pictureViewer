@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User_menu));
             this.btnLogin = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.suruklelbl1 = new System.Windows.Forms.Label();
@@ -83,7 +84,7 @@
             this.suruklelbl1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.suruklelbl1.Location = new System.Drawing.Point(58, 16);
             this.suruklelbl1.Name = "suruklelbl1";
-            this.suruklelbl1.Size = new System.Drawing.Size(176, 17);
+            this.suruklelbl1.Size = new System.Drawing.Size(177, 19);
             this.suruklelbl1.TabIndex = 2;
             this.suruklelbl1.Text = "PictureViewer User Menu";
             // 
@@ -106,13 +107,13 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(2, -7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 243);
+            this.groupBox1.Size = new System.Drawing.Size(270, 237);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::pictureViewer.Properties.Resources.onaybutonu;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(186, 117);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(30, 27);
@@ -174,7 +175,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::pictureViewer.Properties.Resources.onaybutonu;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(186, 84);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 27);
@@ -184,7 +185,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::pictureViewer.Properties.Resources.onaybutonu;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(186, 51);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 27);
@@ -194,7 +195,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::pictureViewer.Properties.Resources.kullanicibutonu;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 36);
@@ -207,7 +208,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(284, 236);
+            this.ClientSize = new System.Drawing.Size(270, 224);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User_menu";

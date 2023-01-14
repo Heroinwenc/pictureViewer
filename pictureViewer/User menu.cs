@@ -9,9 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pictureViewer
-{
+{   
+    
     public partial class User_menu : Form
     {
+        public static bool adminlogin = false;
         public User_menu()
         {
             InitializeComponent();
@@ -28,17 +30,22 @@ namespace pictureViewer
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            if (username == "admin" && password == "admin123")
+            if (username == "" && password == "")
             {
-                MessageBox.Show("Giriş Başarılı!");
+                if (MessageBox.Show("Giriş yapmak ister misiniz?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    adminlogin = true;
+                  Form1 form1 = new Form1();
+                  form1.Hide();
+                  form1.Show();
+                  
+                }
             }
+             
             else
             {
                 MessageBox.Show("Kullanıcı adı veya şifre yanlış!");
             }
         }
-
-
-
     }
 }

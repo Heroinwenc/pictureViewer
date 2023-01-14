@@ -163,6 +163,13 @@ namespace pictureViewer
             }
         }
 
+        private void kullanicibutton_Click(object sender, EventArgs e)
+        {
+            // Kullanıcı Menüsü.
+            User_menu usermenu = new User_menu();
+            usermenu.ShowDialog();
+        }
+
         private void ayarbutton_Click(object sender, EventArgs e)
         {
             // Ayarlar Menüsü.
@@ -170,11 +177,59 @@ namespace pictureViewer
             settingsForm.ShowDialog();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void adminbutton_Click(object sender, EventArgs e)
         {
-            // Kullanıcı Menüsü.
-            User_menu usermenu = new User_menu();
-            usermenu.ShowDialog();
+            // Admin Panel Menüsü.
+            adminpanel adminform = new adminpanel();
+            adminform.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //adminbutton.Visible = false;
+           
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {           
+            if (User_menu.adminlogin == true)
+            {
+                adminbutton.Visible = true;
+                adminpanel adminform = new adminpanel();
+                adminform.Close();
+            }
+            else
+                adminbutton.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+        private void suruklelbl1_MouseDown(object sender, MouseEventArgs e)
+        //Tıkladığımızda mouse tuşu aşağı doğru hareket edince gerçekleşir.
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void suruklelbl1_MouseMove(object sender, MouseEventArgs e)
+        //Mouse hareket ederse gerçekleşecek ifadeler. Biz basılı iken hareket etmesi için dragging tanımladık.
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void suruklelbl1_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
         }
     }
 }

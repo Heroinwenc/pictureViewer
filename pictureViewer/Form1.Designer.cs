@@ -40,7 +40,7 @@ namespace pictureViewer
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkOrderly = new System.Windows.Forms.CheckBox();
             this.chkSlideShow = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.goruntuleyicibox = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.adminbutton = new System.Windows.Forms.PictureBox();
             this.ayarbutton = new System.Windows.Forms.PictureBox();
@@ -49,7 +49,7 @@ namespace pictureViewer
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goruntuleyicibox)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminbutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ayarbutton)).BeginInit();
@@ -74,12 +74,16 @@ namespace pictureViewer
             // 
             // listBox1
             // 
+            this.listBox1.AllowDrop = true;
+            this.listBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 58);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(272, 459);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox1_DragDrop);
+            this.listBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.listBox1_DragOver);
             // 
             // btnKlasorSec
             // 
@@ -132,16 +136,16 @@ namespace pictureViewer
             this.chkSlideShow.UseVisualStyleBackColor = true;
             this.chkSlideShow.CheckedChanged += new System.EventHandler(this.chkSlideShow_CheckedChanged);
             // 
-            // pictureBox1
+            // goruntuleyicibox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(311, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(531, 459);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.goruntuleyicibox.Location = new System.Drawing.Point(311, 58);
+            this.goruntuleyicibox.Name = "goruntuleyicibox";
+            this.goruntuleyicibox.Size = new System.Drawing.Size(531, 459);
+            this.goruntuleyicibox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.goruntuleyicibox.TabIndex = 1;
+            this.goruntuleyicibox.TabStop = false;
+            this.goruntuleyicibox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.goruntuleyicibox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
             // groupBox2
             // 
@@ -195,9 +199,10 @@ namespace pictureViewer
             this.suruklelbl1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.suruklelbl1.Location = new System.Drawing.Point(60, 19);
             this.suruklelbl1.Name = "suruklelbl1";
-            this.suruklelbl1.Size = new System.Drawing.Size(177, 19);
+            this.suruklelbl1.Size = new System.Drawing.Size(787, 19);
             this.suruklelbl1.TabIndex = 9;
-            this.suruklelbl1.Text = "PictureViewer User Menu";
+            this.suruklelbl1.Text = "PictureViewer Picture and Video Viewer                                           " +
+    "                                           VideoViewer is very soon";
             this.suruklelbl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.suruklelbl1_MouseDown);
             this.suruklelbl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.suruklelbl1_MouseMove);
             this.suruklelbl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.suruklelbl1_MouseUp);
@@ -211,6 +216,9 @@ namespace pictureViewer
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
             // button2
             // 
@@ -218,9 +226,9 @@ namespace pictureViewer
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(835, 3);
+            this.button2.Location = new System.Drawing.Point(848, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 35);
+            this.button2.Size = new System.Drawing.Size(70, 35);
             this.button2.TabIndex = 11;
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = false;
@@ -238,7 +246,7 @@ namespace pictureViewer
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnKlasorSec);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.goruntuleyicibox);
             this.Controls.Add(this.btnResimSec);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -249,7 +257,7 @@ namespace pictureViewer
             this.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseWheel);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goruntuleyicibox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adminbutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ayarbutton)).EndInit();
@@ -263,7 +271,6 @@ namespace pictureViewer
         #endregion
 
         private System.Windows.Forms.Button btnResimSec;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnKlasorSec;
@@ -276,9 +283,10 @@ namespace pictureViewer
         private System.Windows.Forms.PictureBox ayarbutton;
         private System.Windows.Forms.PictureBox kullanicibutton;
         public System.Windows.Forms.PictureBox adminbutton;
-        private System.Windows.Forms.Label suruklelbl1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.PictureBox goruntuleyicibox;
+        public System.Windows.Forms.Label suruklelbl1;
     }
 }
 

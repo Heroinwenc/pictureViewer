@@ -33,10 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.suruklelbl1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnkclt = new System.Windows.Forms.Button();
-            this.btnbyt = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,8 +41,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +52,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(140, 294);
+            this.button1.Location = new System.Drawing.Point(140, 154);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 35);
             this.button1.TabIndex = 0;
@@ -72,7 +66,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(39, 294);
+            this.button2.Location = new System.Drawing.Point(39, 154);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 35);
             this.button2.TabIndex = 1;
@@ -96,7 +90,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -110,50 +103,9 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(-2, -5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 358);
+            this.groupBox1.Size = new System.Drawing.Size(287, 229);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnkclt);
-            this.groupBox2.Controls.Add(this.btnbyt);
-            this.groupBox2.Controls.Add(this.trackBar1);
-            this.groupBox2.Location = new System.Drawing.Point(13, 130);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(261, 145);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Zoom Settings";
-            // 
-            // btnkclt
-            // 
-            this.btnkclt.Location = new System.Drawing.Point(147, 88);
-            this.btnkclt.Name = "btnkclt";
-            this.btnkclt.Size = new System.Drawing.Size(75, 23);
-            this.btnkclt.TabIndex = 4;
-            this.btnkclt.Text = "Small";
-            this.btnkclt.UseVisualStyleBackColor = true;
-            this.btnkclt.Click += new System.EventHandler(this.btnkclt_Click);
-            // 
-            // btnbyt
-            // 
-            this.btnbyt.Location = new System.Drawing.Point(35, 88);
-            this.btnbyt.Name = "btnbyt";
-            this.btnbyt.Size = new System.Drawing.Size(75, 23);
-            this.btnbyt.TabIndex = 3;
-            this.btnbyt.Text = "Big";
-            this.btnbyt.UseVisualStyleBackColor = true;
-            this.btnbyt.Click += new System.EventHandler(this.btnbyt_Click);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(48, 37);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(162, 45);
-            this.trackBar1.TabIndex = 2;
-            this.trackBar1.TickFrequency = 90;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // comboBox1
             // 
@@ -195,6 +147,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(205, 97);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 27);
@@ -205,6 +158,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(205, 64);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 27);
@@ -231,7 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(284, 349);
+            this.ClientSize = new System.Drawing.Size(284, 223);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingsForm";
@@ -240,9 +194,6 @@
             this.Text = "PictureViewer Settings";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -263,9 +214,5 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnkclt;
-        private System.Windows.Forms.Button btnbyt;
-        private System.Windows.Forms.TrackBar trackBar1;
     }
 }

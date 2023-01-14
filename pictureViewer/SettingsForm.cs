@@ -19,7 +19,7 @@ namespace pictureViewer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();    
         }
         private bool dragging = false;
         private Point dragCursorPoint;
@@ -70,12 +70,12 @@ namespace pictureViewer
         {
             dragging = false;
         }
-        Form1 frm1 = new Form1();
+        Form1 form1 = new Form1();
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             try
             {
-                frm1.timer1.Interval = Convert.ToInt32(textBox1.Text);
+                form1.timer1.Interval = Convert.ToInt32(textBox1.Text);
             }
             catch
             {
@@ -96,6 +96,7 @@ namespace pictureViewer
                 label1.Text = "Slayt Süre";
                 label2.Text = "              Dil";
                 MessageBox.Show("Değişiklikler Kaydedildi, Lütfen Slaytı Yeniden Başlatın!");
+                form1.suruklelbl1.Text = "Fotoğraf ve Video Görüntüleyici                                                                                      Video Görüntüleyici Çok Yakında";
             }
             else if(dil==1)
             {
@@ -117,26 +118,6 @@ namespace pictureViewer
             {
                 MessageBox.Show("Language Set to English!");
             }
-        }
-
-        private void btnbyt_Click(object sender, EventArgs e)
-        {
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.Width = pictureBox1.Image.Width + 50;
-            pictureBox1.Height = pictureBox1.Image.Height + 50;
-        }
-
-        private void btnkclt_Click(object sender, EventArgs e)
-        {
-            pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
-            pictureBox1.Width = pictureBox1.Image.Width;
-            pictureBox1.Height = pictureBox1.Image.Height;
-        }
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            pictureBox1.Width = trackBar1.Value * 10;
-            pictureBox1.Height = trackBar1.Value * 10;
         }
     }
 }

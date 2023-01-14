@@ -26,7 +26,7 @@ namespace pictureViewer
             openFileDialog1.FileName = "";
             openFileDialog1.ShowDialog();
             if (openFileDialog1.FileName.Length > 0)
-                pictureBox1.ImageLocation = openFileDialog1.FileName;
+                goruntuleyicibox.ImageLocation = openFileDialog1.FileName;
             else
                 MessageBox.Show("Dosya seçmediniz!");
         }
@@ -82,7 +82,7 @@ namespace pictureViewer
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pictureBox1.ImageLocation = listBox1.Text;
+            goruntuleyicibox.ImageLocation = listBox1.Text;
         }
 
 
@@ -131,33 +131,33 @@ namespace pictureViewer
         {
             if (e.Button == MouseButtons.Left)
             {
-                Point mousePos = pictureBox1.PointToClient(Control.MousePosition);
+                Point mousePos = goruntuleyicibox.PointToClient(Control.MousePosition);
                 int deltaY = mousePos.Y - mouseDownPoint.Y;
-                int nWidth = pictureBox1.Width + deltaY;
-                int nHeight = pictureBox1.Height + deltaY;
+                int nWidth = goruntuleyicibox.Width + deltaY;
+                int nHeight = goruntuleyicibox.Height + deltaY;
                 if (nWidth > 0 && nHeight > 0)
                 {
-                    pictureBox1.Width = nWidth;
-                    pictureBox1.Height = nHeight;
+                    goruntuleyicibox.Width = nWidth;
+                    goruntuleyicibox.Height = nHeight;
                 }
             }
         }
 
         private void Form1_MouseWheel(object sender, MouseEventArgs e)
         {
-            if (pictureBox1.Image != null)
+            if (goruntuleyicibox.Image != null)
             {
                 if (e.Delta > 0)
                 {
-                    pictureBox1.Width += 10;
-                    pictureBox1.Height += 10;
+                    goruntuleyicibox.Width += 10;
+                    goruntuleyicibox.Height += 10;
                 }
                 else
                 {
-                    if (pictureBox1.Width > 50 && pictureBox1.Height > 50)
+                    if (goruntuleyicibox.Width > 50 && goruntuleyicibox.Height > 50)
                     {
-                        pictureBox1.Width -= 10;
-                        pictureBox1.Height -= 10;
+                        goruntuleyicibox.Width -= 10;
+                        goruntuleyicibox.Height -= 10;
                     }
                 }
             }
@@ -230,6 +230,56 @@ namespace pictureViewer
         private void suruklelbl1_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.InitLayout();
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        //Tıkladığımızda mouse tuşu aşağı doğru hareket edince gerçekleşir.
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        //Mouse hareket ederse gerçekleşecek ifadeler. Biz basılı iken hareket etmesi için dragging tanımladık.
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void listBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string dosya in files)
+            {
+                if (IsImage(dosya))
+                {
+                    listBox1.Items.Add(dosya);
+                }
+            }
+        }
+        private bool IsImage(string dosya)
+        {
+            string ext = Path.GetExtension(dosya).ToLower();
+            return ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".tif" || ext == ".tiff" ;
+        }
+
+        private void listBox1_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.All;
         }
     }
 }

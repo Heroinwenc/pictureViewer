@@ -7,4 +7,4 @@ Timer çalıştığında, eğer slayt gösterisi sıralı olarak seçilmişse, r
 
 Bu kod parçacığında ayrıca, slayt gösterisi özelliğinin açık veya kapalı olduğunu kontrol eden bir CheckBox kullanılmıştır. Eğer slayt gösterisi açık ise, timer çalıştırılır ve resimler slayt şeklinde gösterilir. Eğer slayt gösterisi kapalı ise, timer durdurulur ve resimler slayt şeklinde gösterilmez.
 
-Umarım bu bilgiler faydalı olmuştur. Eğer daha detaylı bilgiye ihtiyacınız olursa, Discord (heroinwenc#0001) ulaşıp lütfen sorunuzu açıkça belirtin.
+Umarım bu bilgiler faydalı olmuştur. Eğer daha detaylı bilgiye ihtiyacınız olursa, Discord (heronwenc#0001) ulaşıp lütfen sorunuzu açıkça belirtin.
